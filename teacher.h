@@ -10,6 +10,15 @@ class Employee
         string firstName;
         string lastName;
         string position;
+        string loginUserName;
+
+    public:
+        Employee();
+        void SetFirst(string);
+        void SetLast(string);
+        void SetPosition(string);
+        void SetUserName(string);
+        void GenerateNewEmployee();
 
 };
 class Teacher : Employee {
@@ -22,8 +31,6 @@ class Teacher : Employee {
     public: 
         Teacher();
         Teacher(string, string, string, int, vector<Student>);
-        void SetFirst(string);
-        void SetLast(string);
         void SetCourse(string);
         void SetNumStudents(int);
         void AddStudent(Student); 
