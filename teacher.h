@@ -4,25 +4,13 @@
 #include "student.h"
 using namespace std;
 
-class Employee
-{
-    protected: 
+
+class Teacher {
+    private:
         string firstName;
         string lastName;
         string position;
         string loginUserName;
-
-    public:
-        Employee();
-        void SetFirst(string);
-        void SetLast(string);
-        void SetPosition(string);
-        void SetUserName(string);
-        void GenerateNewEmployee();
-
-};
-class Teacher : Employee {
-    private:
         string course;
         int roomNumber;
         int numberOfStudents;

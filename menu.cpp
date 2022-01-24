@@ -7,6 +7,13 @@
 #include "student.h"
 using namespace std;
 
+void PrintMenu()
+{
+    cout << "1. Login" << endl;
+    cout << "2. Add New User" << endl;
+    cout << "3. Delete User" << endl;
+}
+/*
 Teacher NewUser()
 {
     string username, password, first, last, course;
@@ -18,13 +25,14 @@ Teacher NewUser()
     cout << "Enter password: ";
     cin >> password;
     
-    first = "Randal";
-    last = "Carr";
+    first = "New";
+    last = "User";
     course = "Calculus";
-    Teacher RandalCarr = Teacher(first, last, course, numStudents,kids);
+    Teacher newUser = Teacher(first, last, course, numStudents,kids);
 
-    return RandalCarr;
+    return newUser;
 }
+*/
 int Login(string userName, string password)
 {
     int success = 0; // 1 for success, 0 for fail
@@ -52,4 +60,9 @@ void SaveData(string fileName, vector<Student> students, vector<Teacher> teacher
     {
         myfile.open("TeacherData.txt");
     }
+}
+
+void StartProgram()
+{
+    PrintMenu();
 }

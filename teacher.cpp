@@ -13,10 +13,10 @@ Teacher::Teacher(string newFirstName, string newLastName, string newCourseName, 
 }
 
 // Setters
-void Employee::SetFirst(string newFirst) { firstName = newFirst; }
-void Employee::SetLast(string newLast) { lastName = newLast; }
-void Employee::SetPosition(string newPosition) { position = newPosition; }
-void Employee::SetUserName(string newUser) { loginUserName = newUser; }
+//void Employee::SetFirst(string newFirst) { firstName = newFirst; }
+//void Employee::SetLast(string newLast) { lastName = newLast; }
+//void Employee::SetPosition(string newPosition) { position = newPosition; }
+//void Employee::SetUserName(string newUser) { loginUserName = newUser; }
 void Teacher::SetCourse(string newCourse) { course = newCourse; }
 void Teacher::SetNumStudents(int numStudents) {numberOfStudents = numStudents; }
 
@@ -47,6 +47,7 @@ Student Teacher::findStudent(string studentFirstName, string studentLastName)
     }
     return x;
 }
+/*
 void Employee::GenerateNewEmployee()
 {
     string first, last, userName, position; 
@@ -93,6 +94,7 @@ void Employee::GenerateNewEmployee()
          //create teacher
     }
 }
+*/
 
 void Teacher::Print()
 {
