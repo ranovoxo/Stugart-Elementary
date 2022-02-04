@@ -1,24 +1,24 @@
 #ifndef TEACHER_H
 #define TEACHER_H
-#include <string>
+#include "employee.h"
+#include "teacher.h"
 #include "student.h"
-using namespace std;
 
-
-class Teacher {
+class Teacher : public Employee {
     private:
-        string firstName;
-        string lastName;
-        string position;
-        string loginUserName;
         string course;
         int roomNumber;
-        int numberOfStudents;
         vector<Student> students;
 
     public: 
         Teacher();
-        Teacher(string, string, string, int, vector<Student>);
+        Teacher(string newCourse, int newRoom, vector<Student> newClass, string first, string last, string pos, string user_name, string pwd) 
+        : Employee(first, last, pos, user_name, pwd) 
+        {
+            course = newCourse;
+            roomNumber = newRoom;
+            students = newClass;
+        }
         void SetCourse(string);
         void SetNumStudents(int);
         void AddStudent(Student); 
