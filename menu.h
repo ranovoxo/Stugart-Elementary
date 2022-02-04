@@ -3,8 +3,8 @@
 #include "teacher.h"
 using namespace std;
 
-int Login(string, string);
-
+int Login();
+bool verifyLogin(string, string);
 void printMenu();
 Teacher NewUser();
 void SaveData(string, vector<Student>, vector<Teacher>);

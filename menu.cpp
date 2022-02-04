@@ -7,11 +7,31 @@
 #include "student.h"
 using namespace std;
 
-void PrintMenu()
+int PrintMenu()
 {
+    int ch = 0;
     cout << "1. Login" << endl;
     cout << "2. Add New User" << endl;
     cout << "3. Delete User" << endl;
+    cin >> ch;
+    cout << ch << endl;
+    bool accept = false;
+    if(ch != 1 || ch != 2 || ch != 3)
+    {
+        while(accept == false)
+        {
+            cout << "Wrong selection, Try again." << endl;
+            cout << "1. Login" << endl;
+            cout << "2. Add New User" << endl;
+            cout << "3. Delete User" << endl;
+            cin >> ch;
+            if(ch == 1 || ch == 2 || ch == 3)
+            {
+                accept = true; // break loop if good selection
+            }
+        }
+    }  
+    return ch;
 }
 /*
 Teacher NewUser()
@@ -33,10 +53,20 @@ Teacher NewUser()
     return newUser;
 }
 */
-int Login(string userName, string password)
+bool verifyLogin(string, string)
+{
+
+    return false;
+}
+int Login()
 {
     int success = 0; // 1 for success, 0 for fail
-    // function to check if the userName and password are correct;
+    string username, password;
+    cout << "Enter username: ";
+    cin >> username;
+    cout << "Enter password: ";
+    cin >> password;
+   
     return success;
 }
 void TeacherMenu()
@@ -64,5 +94,20 @@ void SaveData(string fileName, vector<Student> students, vector<Teacher> teacher
 
 void StartProgram()
 {
-    PrintMenu();
+    int choice = 0;
+    choice = PrintMenu();
+
+    switch(choice) {
+        case 1:
+        Login();
+        break;
+        case 2:
+    // code block
+        break;
+        
+        case 3:
+        break;
+    // code block
+}
+    cout << " Done" << endl;
 }

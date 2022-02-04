@@ -1,9 +1,9 @@
 main: main.o  menu.o student.o teacher.o helpers.o
-	g++ student.cpp teacher.cpp main.cpp menu.cpp helpers.cpp
+	g++  main.cpp -lsqlite3 student.cpp teacher.cpp menu.cpp helpers.cpp
 
 
 main.o: main.cpp menu.cpp student.cpp teacher.cpp menu.h student.h teacher.h helpers.cpp helpers.h
-	g++ -c main.cpp
+	g++ main.cpp -lsqlite3
 
 menu.o: menu.h
 	g++ -c menu.cpp
