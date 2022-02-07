@@ -1,21 +1,17 @@
-main: main.o  menu.o employee.o employee.o helpers.o teacher.o
-	g++  main.cpp -lsqlite3 student.cpp employee.cpp menu.cpp helpers.cpp teacher.cpp
+main: main.o  control.o employee.o employee.o teacher.o student.o
+	g++  main.cpp -lsqlite3 students/student.cpp employees/employee.cpp controls/control.cpp teachers/teacher.cpp
 
+employee.o: employees/employee.h
+	g++ -c employees/employee.cpp
 
-main.o: main.cpp menu.cpp student.cpp employee.cpp menu.h student.h employee.h helpers.cpp helpers.h teacher.h
-	g++ main.cpp -lsqlite3 student.cpp employee.cpp menu.cpp helpers.cpp teacher.cpp
+student.o: students/student.h
+	g++ -c students/student.cpp
 
-menu.o: menu.h
-	g++ -c menu.cpp
+teacher.o: teachers/teacher.h students/student.h
+	g++ -c teachers/teacher.cpp
 
-student.o: student.h
-	g++ -c student.cpp
-
-teacher.o: teacher.h student.h
-	g++ -c teacher.cpp
-
-helpers.o: helpers.h
-	g++ -c helpers.cpp
+control.o: controls/control.h
+	g++ -c controls/control.cpp
 
 run:
 	@./a.out

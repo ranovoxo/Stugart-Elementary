@@ -1,7 +1,5 @@
-#include "student.h"
-#include "teacher.h"
-#include "menu.h"
-#include "helpers.h"
+#include "teachers/teacher.h"
+#include "controls/control.h"
 #include <iostream>
 #include <map>
 #include <string>
