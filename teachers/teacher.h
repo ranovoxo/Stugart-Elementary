@@ -8,6 +8,7 @@ class Teacher : public Employee {
     private:
         string course;
         int roomNumber;
+        int classID;
         vector<Student> students;
 
     public: 

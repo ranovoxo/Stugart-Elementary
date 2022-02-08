@@ -6,6 +6,8 @@ using namespace std;
 
 class Employee {
     protected:
+        long user_id;
+        int salary;
         string firstName;
         string lastName;
         string position;
